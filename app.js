@@ -27,7 +27,7 @@ function updateCursor(){
     let yDiff=next.y-current.y;
     current.x+=xDiff*0.35;
     current.y+=yDiff*0.35;
-    cursorCircles[i].style.transform = `translate(${current.x}px, ${current.y}px) scale(${i/TAIL_LENGTH})`;  
+    cursorCircles[i].style.transform=`translate(${current.x}px, ${current.y}px) scale(${i/TAIL_LENGTH})`;  
   }
   requestAnimationFrame(updateCursor)
 }
