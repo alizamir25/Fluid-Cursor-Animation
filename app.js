@@ -19,14 +19,14 @@ function initCursor(){
 }
 function updateCursor(){  
   cursorHistory.shift();
-  cursorHistory.push({ x: mouseX, y: mouseY });
-  for (let i = 0; i < TAIL_LENGTH; i++) {
-    let current = cursorHistory[i];
-    let next = cursorHistory[i + 1] || cursorHistory[TAIL_LENGTH - 1];
-    let xDiff = next.x - current.x;
-    let yDiff = next.y - current.y;
-    current.x += xDiff * 0.35;
-    current.y += yDiff * 0.35;
+  cursorHistory.push({x:mouseX,y:mouseY});
+  for (let i=0;i<TAIL_LENGTH;i++){
+    let current=cursorHistory[i];
+    let next=cursorHistory[i+1] || cursorHistory[TAIL_LENGTH-1];
+    let xDiff=next.x-current.x;
+    let yDiff=next.y-current.y;
+    current.x+=xDiff*0.35;
+    current.y+=yDiff*0.35;
     cursorCircles[i].style.transform = `translate(${current.x}px, ${current.y}px) scale(${i/TAIL_LENGTH})`;  
   }
   requestAnimationFrame(updateCursor)
