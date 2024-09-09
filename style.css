@@ -2,12 +2,10 @@
     --cursor-size: 28px;
     --bg: #FAF7EE;
   }
-  
   .page-wrap {
     background: var(--bg);
     min-height: 100vh;
   }
-  
   #cursor {
     position: fixed;
     top: calc(var(--cursor-size) * -0.5);
@@ -16,7 +14,6 @@
     mix-blend-mode: difference;  
     filter: url(#goo);
   }
-  
   .cursor-circle {
     position: absolute;
     top: 0;
@@ -27,11 +24,9 @@
     background: var(--bg);
     transform-origin: center center;
   }
-  
   body {
     overflow-x: hidden;
   }
-  
   h1 {
     margin: 0;
     padding: 50px;
@@ -42,7 +37,6 @@
     text-transform: uppercase;
     user-select: none;
   }
-  
   .goo {
     display: none;
   }
