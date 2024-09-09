@@ -1,12 +1,12 @@
-:root {
+:root{
     --cursor-size: 28px;
     --bg: #FAF7EE;
   }
-  .page-wrap {
+  .page-wrap{
     background: var(--bg);
     min-height: 100vh;
   }
-  #cursor {
+  #cursor{
     position: fixed;
     top: calc(var(--cursor-size) * -0.5);
     left:  calc(var(--cursor-size) * -0.5);
@@ -14,7 +14,7 @@
     mix-blend-mode: difference;  
     filter: url(#goo);
   }
-  .cursor-circle {
+  .cursor-circle{
     position: absolute;
     top: 0;
     left: 0;
@@ -24,10 +24,10 @@
     background: var(--bg);
     transform-origin: center center;
   }
-  body {
+  body{
     overflow-x: hidden;
   }
-  h1 {
+  h1{
     margin: 0;
     padding: 50px;
     text-align: center;
@@ -37,6 +37,6 @@
     text-transform: uppercase;
     user-select: none;
   }
-  .goo {
+  .goo{
     display: none;
   }
