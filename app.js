@@ -1,13 +1,13 @@
 console.clear();
-const TAIL_LENGTH = 20;
-const cursor = document.getElementById('cursor');
-let mouseX = 0;
-let mouseY = 0;
+const TAIL_LENGTH=20;
+const cursor=document.getElementById('cursor');
+let mouseX=0;
+let mouseY=0;
 let cursorCircles;
-let cursorHistory = Array(TAIL_LENGTH).fill({x: 0, y: 0});
+let cursorHistory=Array(TAIL_LENGTH).fill({x: 0, y: 0});
 function onMouseMove(event) {
-  mouseX = event.clientX;
-  mouseY = event.clientY;
+  mouseX=event.clientX;
+  mouseY=event.clientY;
 }
 function initCursor() {
   for (let i = 0; i < TAIL_LENGTH; i++) {
