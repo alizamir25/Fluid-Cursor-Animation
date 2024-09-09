@@ -5,19 +5,19 @@ let mouseX=0;
 let mouseY=0;
 let cursorCircles;
 let cursorHistory=Array(TAIL_LENGTH).fill({x: 0, y: 0});
-function onMouseMove(event) {
+function onMouseMove(event){
   mouseX=event.clientX;
   mouseY=event.clientY;
 }
-function initCursor() {
-  for (let i = 0; i < TAIL_LENGTH; i++) {
+function initCursor(){
+  for (let i = 0; i < TAIL_LENGTH; i++){
     let div = document.createElement('div');
     div.classList.add('cursor-circle') ;
     cursor.append(div);
   }
   cursorCircles = Array.from(document.querySelectorAll('.cursor-circle'));
 }
-function updateCursor() {  
+function updateCursor(){  
   cursorHistory.shift();
   cursorHistory.push({ x: mouseX, y: mouseY });
   for (let i = 0; i < TAIL_LENGTH; i++) {
